@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean name="hospital" class="com.BlackManta.spring.list.Hospital">
+    <property name="name" value="Nairobi Hospital"/>
+    <property name="departments">
+        <list>
+            <value>Front Office</value>
+            <value>Back Office</value>
+            <value>In Office</value>
+        </list>
+    </property>
+</bean>
+</beans>
