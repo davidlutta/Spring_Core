@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--Always start with the dependent bean(The bean which is independent)-->
+    <bean name="scores" class="com.BlackManta.spring.refTypes.Scores" p:mathScore="80" p:englishScores="70" p:swahiliScores="90" />
+
+    <!--<bean name="student" class="com.BlackManta.spring.refTypes.Student">-->
+        <!--method 1-->
+        <!--<property name="scores">-->
+            <!--<ref bean="scores"/>-->
+        <!--</property>-->
+
+        <!--method 2-->
+        <!--<property name="scores" ref="scores"/>-->
+    <!--</bean>-->
+
+    <!--or -->
+
+    <bean name="student" class="com.BlackManta.spring.refTypes.Student" p:scores-ref="scores"/>
+
+</beans>
