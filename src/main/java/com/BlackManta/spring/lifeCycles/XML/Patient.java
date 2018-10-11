@@ -11,7 +11,7 @@ public class Patient {
         this.id = id;
     }
 
-    //Acts as our int method
+    //Acts as our int method and is called after all our setter methods have been called
     public void helloWorld(){
         System.out.println("Hello World !");
     }
@@ -19,5 +19,12 @@ public class Patient {
     //Acts as our destroy method
     public void dip(){
         System.out.println("I wanna Dip my hommie");
+    }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "id=" + id +
+                '}';
     }
 }
